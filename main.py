@@ -1,13 +1,12 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 import logging
 import uvicorn
 from fastapi import FastAPI
 
 from api.routes import router
 from services.llm_manager import llm_manager
-
-from dotenv import load_dotenv
-
-load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 app = FastAPI(title="vLLM FastAPI with Gpt-oss-20b")

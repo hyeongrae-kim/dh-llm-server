@@ -48,6 +48,7 @@ class LLMManager:
             if self._llm is not None:
                 return
             logger.info("Loading LLM into GPU...")
+            logger.info(f"Get LLM Model from: {MODEL_PATH}")
             self._llm = LLM(model=MODEL_PATH, gpu_memory_utilization=GPU_UTIL)
             logger.info("LLM loaded.")
 
